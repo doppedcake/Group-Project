@@ -1,7 +1,5 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+
  */
 package pet;
 //import java.util.Scanner;
@@ -14,15 +12,23 @@ public class Pet {
    // Scanner in = new Scanner(System.in);
     /*
     * 
-    
+     implement food type in a list 
     
     */
     
     
-    private String name;
+    private String name; 
     private int age;
-    private String sound;
+    private String sound; // is the definine charateristic of each pet
     private boolean hunger;
+    private int index;
+    private String type;
+    
+    public Pet(String n, int a){
+        name = n;
+        age = a;
+                
+    }
 
     public Pet(){
         name = null;
@@ -37,6 +43,9 @@ public class Pet {
         sound = s;
         hunger = h;   
     }
+        public void setType(String t){
+            type = t;
+        }
         
         public void setName( String n){
             name = n;
@@ -64,7 +73,9 @@ public class Pet {
             }
 
         }
-        
+        public String getType(){
+            return type;
+        }
         public int getAge(){
             return age;
         }
@@ -85,5 +96,8 @@ public class Pet {
             hunger = false;
         }
         
+        public int getIndex(){
+            return index;
+        }
     
 }
